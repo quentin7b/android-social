@@ -19,7 +19,7 @@ baseContext.openSocialNetwork(Twitter("kleinquentin"))
 (or in **OLD** Java)
 
 ```Java
-Context_extKt.openSocialNetwork(getBaseContext(), Twitter("kleinquentin"));
+Context_extKt.openSocialNetwork(getBaseContext(), new Twitter("kleinquentin"));
 ```
 
 Then the library will either open the twitter app or start the web browser on the given profile.
@@ -56,7 +56,7 @@ In the *module* `build.gradle`
 
 ```gradle
 dependencies {
-    compile 'com.github.quentin7b:android-social:1.0.0'
+    implementation 'com.github.quentin7b:android-social:1.0.0'
 }
 ```
 

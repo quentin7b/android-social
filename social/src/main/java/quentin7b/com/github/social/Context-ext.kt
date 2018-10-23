@@ -11,17 +11,14 @@ import android.net.Uri
  *
  * @param socialNetwork the network to open
  */
-fun Context.openSocialNetwork(socialNetwork: SocialNetwork) =
-        startActivity(
-                Intent(
-                        Intent.ACTION_VIEW,
-                        Uri.parse(try {
-                            // Try to resolve package of the app
-                            packageManager.getApplicationInfo(socialNetwork.packageName, 0)
-                            socialNetwork.buildIntentUri()
-                        } catch (_: PackageManager.NameNotFoundException) {
-                            // Social network is not installed
-                            socialNetwork.buildWebUrl()
-                        })
-                )
-        )
+fun Context.openSocialNetwork(socialNetwork: SocialNetwork) {
+    var appIntent = Intent(Intent.ACTION_VIEW, Uri.parse(socialNetwork.buildIntentUri()))
+    val matchingActivities = packageManager.queryIntentActivities(appIntent, PackageManager.MATCH_DEFAULT_ONLY)
+
+    if (matchingActivities.isEmpty()) {
+        // No Activity found for this intent so start the browser
+        appIntent = Intent(Intent.ACTION_VIEW, Uri.parse(socialNetwork.buildWebUrl()))
+    }
+
+    startActivity(appIntent)
+}

@@ -8,7 +8,7 @@ import quentin7b.com.github.social.SocialNetwork
  * @param type the type of the Youtube item (CHANNEL or VIDEO)
  * @param pageId the page id to open (channel id, video id) not the full url
  */
-class Youtube(private val type: Type, private val pageId: String) : SocialNetwork("com.google.android.youtube") {
+class Youtube(private val type: Type, private val pageId: String) : SocialNetwork {
 
     init {
         // A LinkedIn page id must be provided not empty
@@ -33,7 +33,7 @@ class Youtube(private val type: Type, private val pageId: String) : SocialNetwor
         if (pageId.isNotEmpty()) {
             return "$urn$pageId"
         } else {
-            throw IllegalArgumentException("item or page for LinkedIn must be valid")
+            throw IllegalArgumentException("item or page for Youtube must be valid")
         }
     }
 

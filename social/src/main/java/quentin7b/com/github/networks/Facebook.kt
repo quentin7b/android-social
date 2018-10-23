@@ -8,7 +8,7 @@ import quentin7b.com.github.social.SocialNetwork
  * @param type the type of the facebook item (EVENT, GROUP or PERSON)
  * @param pageId the page id to open (profile name, event id or page id) not the full url
  */
-class Facebook(private val type: Type, private val pageId: String) : SocialNetwork("com.facebook.katana") {
+class Facebook(private val type: Type, private val pageId: String) : SocialNetwork {
 
     init {
         // A facebook page id must be provided not empty

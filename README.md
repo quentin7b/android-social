@@ -1,7 +1,7 @@
 Social
 ===
 
-![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
+![Version 2.0.0](https://img.shields.io/badge/version-2.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
 
 _TL;DR A simple library to open social networks on Android_
 
@@ -56,7 +56,7 @@ In the *module* `build.gradle`
 
 ```gradle
 dependencies {
-    implementation 'com.github.quentin7b:android-social:1.0.0'
+    implementation 'com.github.quentin7b:android-social:2.0.0'
 }
 ```
 

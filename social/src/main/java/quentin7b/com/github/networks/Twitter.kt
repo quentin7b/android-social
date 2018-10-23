@@ -21,6 +21,6 @@ class Twitter(private val profileId: String) : SocialNetwork("com.twitter.androi
 
     companion object {
         private const val INTENT_SCHEME = "twitter://user?screen_name="
-        private const val URL_SCHEME = "httsp://www.twitter.com/"
+        private const val URL_SCHEME = "https://www.twitter.com/"
     }
 }

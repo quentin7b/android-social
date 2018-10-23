@@ -40,7 +40,7 @@ class LinkedIn(private val type: Type, private val pageId: String) : SocialNetwo
 
     companion object {
         private const val INTENT_SCHEME = "https://www.linkedin.com/"
-        private const val URL_SCHEME = "httsp://www.linkedin.com/"
+        private const val URL_SCHEME = INTENT_SCHEME
     }
 
 }

@@ -9,7 +9,7 @@ import quentin7b.com.github.social.SocialNetwork
  * @param type the type of the LinkedIn item (COMPANY or PERSON)
  * @param pageId the page id to open (profile name, company name) not the full url
  */
-class LinkedIn(private val type: Type, private val pageId: String) : SocialNetwork("com.linkedin.android") {
+class LinkedIn(private val type: Type, private val pageId: String) : SocialNetwork {
 
     init {
         // A LinkedIn page id must be provided not empty

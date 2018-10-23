@@ -62,12 +62,11 @@ dependencies {
 
 ## Extends
 
-If a social network is not yet supported but you know how to build it just extends `SocialNetwork` and give it as a parameter.
+If a social network is not yet supported, but you know how to build it, just implements `SocialNetwork` and give it to `openSocialNetwork()` as a parameter.
 
-To extend `SocialNetwork`, you'll have to:
-- give the app id (package name) of the app
-- implement `buildWebUrl()` which builds the URL to open by the browser if the app is not foud
-- implement `buildIntentUri()` which builds the Intent.ACTION_VIEW's extra data
+To implement `SocialNetwork`, you'll have to:
+- override `buildWebUrl()` which builds the URL to open by the browser if the app is not foud
+- override `buildIntentUri()` which builds the Intent.ACTION_VIEW's extra data
 
 Also, feel free to add the implementation in this project by opening a pull request.
 

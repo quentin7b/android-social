@@ -2,7 +2,7 @@ package quentin7b.com.github.networks
 
 import quentin7b.com.github.social.SocialNetwork
 
-class Instagram(private val profileId: String) :  SocialNetwork("com.instagram.android") {
+class Instagram(private val profileId: String) : SocialNetwork {
 
     init {
         if (profileId.isEmpty() || profileId.startsWith("https") || profileId.startsWith('@')) {

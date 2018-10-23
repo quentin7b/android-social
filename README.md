@@ -1,7 +1,7 @@
 Social
 ===
 
-![Version 1.0.0](https://img.shields.io/badge/version-1.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
+![Version 2.0.0](https://img.shields.io/badge/version-2.0.0-green.svg) ![Hosted on Jitpack.io](https://img.shields.io/badge/hosting-jitpack-blue.svg)
 
 _TL;DR A simple library to open social networks on Android_
 
@@ -56,18 +56,17 @@ In the *module* `build.gradle`
 
 ```gradle
 dependencies {
-    implementation 'com.github.quentin7b:android-social:1.0.0'
+    implementation 'com.github.quentin7b:android-social:2.0.0'
 }
 ```
 
 ## Extends
 
-If a social network is not yet supported but you know how to build it just extends `SocialNetwork` and give it as a parameter.
+If a social network is not yet supported, but you know how to build it, just implements `SocialNetwork` and give it to `openSocialNetwork()` as a parameter.
 
-To extend `SocialNetwork`, you'll have to:
-- give the app id (package name) of the app
-- implement `buildWebUrl()` which builds the URL to open by the browser if the app is not foud
-- implement `buildIntentUri()` which builds the Intent.ACTION_VIEW's extra data
+To implement `SocialNetwork`, you'll have to:
+- override `buildWebUrl()` which builds the URL to open by the browser if the app is not foud
+- override `buildIntentUri()` which builds the Intent.ACTION_VIEW's extra data
 
 Also, feel free to add the implementation in this project by opening a pull request.
 

@@ -32,6 +32,7 @@ Then the library will either open the twitter app or start the web browser on th
 - [x] Facebook
 - [x] Instagram
 - [x] LinkedIn
+- [x] Youtube
 - [ ] Tumblr
 - [ ] Meetup
 
